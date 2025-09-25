@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+
+/* Prism.js Syntax Highlighting Theme */
+:root {
+  --sh-keyword: #ff79c6;
+  --sh-string: #fff;
+  --sh-comment: #6272a4;
+  --sh-identifier: #50fa7b;
+  --sh-sign: #ff79c6;
+  --sh-space: transparent;
+  --sh-break: transparent;
+}
+@layer base {
+  :root {
+     --background: #fff;
+    --foreground: #171717;
+    --grid-pattern:linear-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+    
+  }
+  body.dark {
+   --background: #111111;
+    --foreground: #ededed;
+    --grid-pattern:linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  }
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: var(--sh-comment);
+}
+
+.token.punctuation {
+  color: #f8f8f2;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: var(--sh-keyword);
+}
+
+.token.boolean,
+.token.number {
+  color: #bd93f9;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: var(--sh-string);
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+  color: var(--sh-identifier);
+}
+@font-face {
+  font-family: famil;
+  src: url(../../public/font/Chococooky.ttf)
+}
+.token.keyword {
+  color: var(--sh-keyword);
+}
+
+.token.regex,
+.token.important {
+  color: #ffb86c;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+/* Ensure lists display properly in preview */
+iframe {
+  color-scheme: light;
+}
+
+/* Override any global list resets */
+/* ul, ol {
+  list-style: revert !important;
+  padding-left: revert !important;
+  margin: revert !important;
+}
+
+ul {
+  list-style-type: disc !important;
+}
+
+ol {
+  list-style-type: decimal !important;
+} */
+
+:root {
+  --background: #fff;
+  --foreground: #171717;
+  --grid-pattern:linear-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #111111;
+    --foreground: #ededed;
+    --grid-pattern:linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  }
+  
+}
+body {
+  background: var(--background);
+  color: var(--foreground);
+  background-attachment: fixed;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* Added light mode grid pattern */
+.grid-pattern {
+  background-image: var(--grid-pattern);
+  background-size: 50px 50px;
+}
