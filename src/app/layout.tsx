@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Andika, Shantell_Sans, Cal_Sans } from "next/font/google";
+import { Shantell_Sans } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Providers } from '../app/components/providers';
@@ -16,11 +16,11 @@ const andika = Shantell_Sans({
 // livvic
 // Andika
 // Removed unused livvic font initialization to fix unused variable error and missing required properties.
-const chococooky = localFont({
-  src: "../../public/font/chococooky.ttf",
-  variable: "--font-chococooky",
-  display: "swap",
-});
+// const chococooky = localFont({
+//   src: "../../public/font/chococooky.ttf",
+//   variable: "--font-chococooky",
+//   display: "swap",
+// });
 
 export const metadata: Metadata = {
   title: "Html converter",
